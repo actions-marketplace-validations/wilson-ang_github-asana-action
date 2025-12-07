@@ -2,32 +2,40 @@
   "name": "github-asana",
   "version": "4.0.0",
   "description": "Action to integrate git with asana",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rimraf dist && tsc",
+    "start": "node dist/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/insurify/github-actions.git"
+    "url": "git+https://github.com/wilson-ang/github-asana-action.git"
   },
   "keywords": [
     "github-actions",
     "asana",
     "git"
   ],
-  "author": "Ali Sajid",
+  "author": "Wilson Ang",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/insurify/github-actions/issues"
-  },
-  "homepage": "https://github.com/insurify/github-actions#readme",
+  "homepage": "https://github.com/wilson-ang/github-asana-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.0",
-    "@actions/github": "^1.1.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^5.1.1",
     "asana": "^0.17.3",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "node-fetch": "^2.7.0",
+    "semver": "^7.6.2"
   },
   "devDependencies": {
-    "jest": "^26.0.1"
+    "@types/asana": "^0.18.16",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^18.0.0",
+    "@types/node-fetch": "^2.6.11",
+    "@types/semver": "^7.5.8",
+    "jest": "^26.0.1",
+    "typescript": "^4.7.4"
   }
 }
